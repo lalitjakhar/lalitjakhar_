@@ -635,6 +635,32 @@ a:focus-visible {
   font-size: 11px;
 }
 
+.project-description {
+  max-width: 470px;
+  margin: 12px 0 0;
+  color: #c1c6bc;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.project-tags,
+.capability-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 13px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-tags li {
+  padding: 4px 8px;
+  border: 1px solid rgb(255 255 255 / 16%);
+  color: #c1c6bc;
+  font-family: var(--font-mono);
+  font-size: 8px;
+}
+
 .project-type {
   padding-top: 5px;
   color: #a4ab9f;
@@ -654,6 +680,162 @@ a:focus-visible {
 .work-footnote .status-dot {
   background: var(--accent);
   box-shadow: 0 0 0 4px rgb(212 243 106 / 12%);
+}
+
+.capabilities-section {
+  background: #eae9e1;
+}
+
+.capabilities-section .section-heading {
+  margin-bottom: 48px;
+}
+
+.capabilities-section .section-intro {
+  color: var(--ink-soft);
+}
+
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.capability-card {
+  display: flex;
+  min-height: 275px;
+  flex-direction: column;
+  padding: 25px 24px 21px;
+  border: 1px solid #d4d5ca;
+  background: rgb(244 243 237 / 55%);
+  transition: transform .25s ease, background .25s ease, border-color .25s ease;
+}
+
+.capability-card:hover {
+  transform: translateY(-4px);
+  border-color: #9caa85;
+  background: var(--paper);
+}
+
+.capability-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.capability-index {
+  color: #718256;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+}
+
+.capability-icon {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  place-items: center;
+  border: 1px solid #cdd2c2;
+  border-radius: 50%;
+  color: #718256;
+  font-size: 17px;
+}
+
+.capability-card h3 {
+  margin: 29px 0 0;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: 1.25;
+}
+
+.capability-card > p {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+  font-size: 10px;
+  line-height: 1.85;
+}
+
+.capability-tags {
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 19px;
+}
+
+.capability-tags li {
+  padding: 4px 7px;
+  border: 1px solid #d7d9d0;
+  color: #5d6753;
+  font-family: var(--font-mono);
+  font-size: 7px;
+}
+
+.process-panel {
+  display: grid;
+  grid-template-columns: .78fr 1.22fr;
+  gap: 8%;
+  margin-top: 55px;
+  padding: 39px 42px;
+  background: var(--dark);
+  color: #f5f4ed;
+}
+
+.process-heading .eyebrow {
+  color: #b0b6aa;
+}
+
+.process-heading .eyebrow > span {
+  color: var(--accent);
+}
+
+.process-heading h3 {
+  margin: 19px 0 0;
+  font-size: clamp(26px, 3vw, 37px);
+  font-weight: 700;
+  letter-spacing: -.065em;
+  line-height: 1.12;
+}
+
+.process-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.process-list li {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgb(255 255 255 / 15%);
+}
+
+.process-list li:first-child {
+  padding-top: 0;
+}
+
+.process-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.process-number {
+  padding-top: 3px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 8px;
+}
+
+.process-list h4 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.process-list p {
+  margin: 3px 0 0;
+  color: #b6bcb2;
+  font-size: 9px;
+  line-height: 1.8;
 }
 
 .about-section {
@@ -1135,6 +1317,20 @@ a:focus-visible {
     column-gap: 30px;
   }
 
+  .capability-grid {
+    gap: 10px;
+  }
+
+  .capability-card {
+    padding-inline: 18px;
+  }
+
+  .process-panel {
+    grid-template-columns: .85fr 1.15fr;
+    gap: 5%;
+    padding-inline: 28px;
+  }
+
   .about-layout,
   .experience-layout {
     gap: 8%;
@@ -1355,6 +1551,10 @@ a:focus-visible {
     font-size: 18px;
   }
 
+  .project-description {
+    font-size: 10px;
+  }
+
   .project-type {
     font-size: 7px;
   }
@@ -1362,6 +1562,45 @@ a:focus-visible {
   .work-footnote {
     margin-top: 45px;
     font-size: 7px;
+  }
+
+  .capabilities-section .section-heading {
+    margin-bottom: 34px;
+  }
+
+  .capability-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .capability-card {
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .capability-card h3 {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .capability-card > p {
+    max-width: 440px;
+  }
+
+  .capability-tags {
+    margin-top: 0;
+    padding-top: 15px;
+  }
+
+  .process-panel {
+    grid-template-columns: 1fr;
+    gap: 27px;
+    margin-top: 30px;
+    padding: 27px 22px;
+  }
+
+  .process-heading h3 {
+    font-size: 30px;
   }
 
   .about-layout {
