@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lalitjakhar.github.io/lalitjakhar_/sitemap.xml
